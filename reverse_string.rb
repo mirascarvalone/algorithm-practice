@@ -8,3 +8,13 @@ def reverse_string(s)
   end
   array.join("")
 end
+
+def reverse_string(s)
+  array = s.split("")
+  for i in 0..array.length/2-1
+    letter_to_move = array[i]
+    array[i] = array[array.length-1-i]
+    array[array.length-1-i] = letter_to_move
+  end
+  array.join("")
+end
